@@ -1,4 +1,6 @@
-# README
+# README 
+
+This is Charlie Lynch's nameofapp, which is the first rails app for CareerFoundry.com in the third section of the Web Development course. 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
