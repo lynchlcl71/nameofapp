@@ -9,11 +9,17 @@ h1 {
   text-align: center;
 }
 
-.footer {
-  position: absolute;
-  height: 60px;
+footer {
+  border-top: 2px solid black;
+  color: white;
   background-color: gray;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;  
+  font-size: 2em;
 }
 
 #text {
