@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body {
   background-color: white;
   position: relative;
@@ -29,6 +30,7 @@ h2 {
 }
 
 footer {
+  position: fixed;
   border-top: 2px solid black;
   color: white;
   background-color: gray;
@@ -45,4 +47,31 @@ footer {
   padding-top: 8px;
   font-size: 25px;
 }
+
+.carousel {
+  text-align: center;
+  margin: auto;
+}
+
+.carousel-inner { 
+max-height: 1200px;
+max-width: 1200px;
+display: block;
+height: auto;
+}
+
+.carousel-caption {
+  font-size: 28px;
+  color: blue;
+  margin-bottom: 25px;
+}
+
+#land-pic {
+  min-width: 100%;
+  min-height: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+
 
