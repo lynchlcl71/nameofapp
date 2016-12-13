@@ -61,17 +61,23 @@ height: auto;
 }
 
 .carousel-caption {
-  font-size: 28px;
+  font-size: 18px;
   color: blue;
-  margin-bottom: 25px;
+  margin-bottom: -40px;
 }
 
+.carousel-indicators li { 
+  visibility: hidden; 
+}
+
+
 #land-pic {
-  min-width: 100%;
-  min-height: 100%;
+  width: 40%;
+  height: 50%;
   text-align: center;
   display: inline-block;
 }
+
 
 
 
