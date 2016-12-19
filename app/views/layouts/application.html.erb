@@ -24,11 +24,16 @@
         </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Home", 'static_pages/landing_page' %> </li>
+            <li><%= link_to "Home", '/static_pages/landing_page' %> </li>
             <li><%= link_to "Products", products_path %></li>
             <li> <%= link_to "About", '/static_pages/about' %> </li>
             <li><%= link_to "Contact", '/static_pages/contact' %></li>
-          </ul>
+            <li><%= form_tag("/products", method: "get") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+            <% end %></li>
+          </ul> 
         </div>
       </div>
     </nav>
