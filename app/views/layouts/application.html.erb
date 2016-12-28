@@ -9,7 +9,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <%= csrf_meta_tags %>
   </head>
-
+  <p class="notice"><%= notice %></p>
   <body>
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
@@ -34,6 +34,16 @@
             <%= submit_tag("Search") %>
             <% end %></li>
           </ul> 
+          <ul class="nav pull-right">
+            <li>
+            <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+           <% else %>
+             <%= link_to('Login', new_user_session_path) %>
+            <% end %>
+            </li>
+           </ul>
+
         </div>
       </div>
     </nav>
