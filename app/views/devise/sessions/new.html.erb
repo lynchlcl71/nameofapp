@@ -1,8 +1,7 @@
-<div class="container-fluid">
-  <div class="jumbotron devise">
-    <div class="row">
-      <div class="col-md-offset-4 col-md-4 form-container-devise">
-        <h2>Log in</h2>
+<div class="contactContainer">
+  <div class="border-form-div">
+    <h1 style="text-align: center">Login</h1>
+      <div class="wrapper">
 
          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
@@ -23,15 +22,13 @@
           <% end -%>
 
           <div class="actions">
-            <%= f.submit "LOG IN", class:"btn-form-devise"%>
+            <%= f.submit "LOG IN", class: "btn btn-md btn-primary btn-block" %>
           </div>
           
           <% end %>
 
           <%= render "devise/shared/links" %>
-         </div> 
-        <div class="col-md-4">
-      </div>
-    </div> 
+
+     </div> 
   </div> 
 </div> 
