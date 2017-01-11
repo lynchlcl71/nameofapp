@@ -12,7 +12,12 @@
       </p>
     </div>  
 
-    <div class="col-md-3">
+    <div class="col-md-12">
+      <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    </div>
+
+
+    <div class="col-md-12">
       <p>
         <strong>Description:</strong>
         <%= @product.description %>
@@ -26,14 +31,14 @@
       </p>
     </div> -->
 
-    <div class="col-md-3">
+    <div class="col-md-12">
       <p>
         <strong>Colour:</strong>
         <%= @product.colour %>
       </p>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-12">
       <p>
         <strong>Price:</strong>
         <%= @product.price %>
