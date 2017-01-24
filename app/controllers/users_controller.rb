@@ -12,6 +12,11 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    if user_signed_in?
+
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /users/new
