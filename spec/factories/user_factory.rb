@@ -2,7 +2,7 @@ FactoryGirl.define do
   
   factory :user do
     email "lcl@gmale.com"
-    password "pwd1"
+    password "pwd1234"
     first_name "LC"
     last_name "Lynch"
     admin false
@@ -10,7 +10,7 @@ FactoryGirl.define do
   
   factory :admin, class: User do
       email "admin@gmale.com"
-      password "pwd2"
+      password "pwd5678"
       admin true
       first_name "Admin"
       last_name "User"
