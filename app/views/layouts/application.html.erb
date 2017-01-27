@@ -29,22 +29,23 @@
         </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Home", '/static_pages/landing_page' %> </li>
+            <li><%= link_to "Home", static_pages_landing_page_path %> </li>
             <li><%= link_to "Products", products_path %></li>
-            <li> <%= link_to "About", '/static_pages/about' %> </li>
-            <li><%= link_to "Contact", '/static_pages/contact' %></li>
-            <li><%= form_tag("/products", method: "get") do %>
-            <%= label_tag(:q, "Search for:") %>
-            <%= text_field_tag(:q) %>
-            <%= submit_tag("Search") %>
+            <li> <%= link_to "About", static_pages_about_path %> </li>
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <li><%= form_tag("/products", method: "get", class: "navbar-collapse", style:"margin: 8px 0;", role: "search") do %>
+              <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+              <div class="form-group" style="display: inline-block">
+               <%= text_field_tag([:q], nil, placeholder: 'Search for Bikes', class: 'input-medium form-control') %>
+              </div>
             <% end %></li>
           </ul> 
           <ul class="nav pull-right">
             <li>
             <% if user_signed_in? %>
-            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete, :style => "color: #f7290e") %>
            <% else %>
-             <%= link_to('Login', new_user_session_path) %>
+             <%= link_to('Login', new_user_session_path, :style => "color: #0ef722") %>
             <% end %>
             </li>
            </ul>
