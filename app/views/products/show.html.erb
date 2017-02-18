@@ -4,7 +4,7 @@
 
  <%= image_tag(@product.image_url, width: "350", class: "img-responsive detail img-zoom", data_zoom_image: "@product.image_url_large") %>
 
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-md-3">
       <p>
         <% cache @product do %> 
@@ -14,7 +14,6 @@
       </p>
     </div>  
 
-    
 
     <div class="col-md-12">
       <p>
