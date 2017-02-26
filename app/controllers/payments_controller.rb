@@ -4,8 +4,8 @@ class PaymentsController < ApplicationController
     @product = Product.find(params[:product_id])
     @user = current_user
     token = params[:stripeToken]
-      # Create the charge on Stripe's servers - this will charge the user's card
-      begin
+    # Create the charge on Stripe's servers - this will charge the user's card
+    begin
         charge = Stripe::Charge.create(
           :amount => @product.price * 100, # amount in cents, again
           :currency => "usd",
@@ -15,6 +15,8 @@ class PaymentsController < ApplicationController
 
       if charge.paid
         Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
+        UserMailer.paid_order(@user, @product).deliver_now
+        flash[:success] = "Payment was successful."
       end
 
       rescue Stripe::CardError => e

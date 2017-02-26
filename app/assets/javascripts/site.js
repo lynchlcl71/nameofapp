@@ -12,11 +12,12 @@ var refreshRating = function() {
 
 $(document).on('turbolinks:load ajaxSuccess', function(){refreshRating();
     $('.img-zoom').elevateZoom({ zoomType: "lens", 
-      lensShape: "round", 
+    lensShape: "round", 
     lensSize: 300, 
     lensFadeIn: 500, 
     lensFadeOut: 600 
   });
+  $(".alert").delay(2000).fadeOut("slow");
 });
 
 
