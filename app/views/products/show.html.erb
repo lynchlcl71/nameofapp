@@ -49,20 +49,11 @@
         <%= link_to 'Back', products_path %><br>
       </div>
 
-      <h4>
-      Views
-      <span class="badge">
-      <%= @product.views %>
-      </span> 
-      </h4>
-
       <p>
         <strong>Average Rating:</strong>
         <div class="rated" id="#average-rating" data-score="<%= @product.average_rating %>">
         </div>
       </p>
-
-
 
     <% end %>
 
