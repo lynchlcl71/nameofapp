@@ -8,12 +8,12 @@ class Product < ApplicationRecord
     comments.average(:rating).to_f
   end
 
-  def views
+   def views
     $redis.get("product:#{id}")
   end
 
   def viewed!
-    $redis.incr("product:#{id}")
+    $redis.inc("product:#{id}")
   end
   validates :name, presence: true
 end
