@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :products do
-    resources :comments
+  resources :comments
   end
 
   resources :users
